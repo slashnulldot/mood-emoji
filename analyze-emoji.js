@@ -7,15 +7,11 @@ const emojiToMood = JSON.parse(fileContents);
 
 const userInput = [...process.argv[2]];
 
-for (const char of userInput) {
-  ...
-}
-
 let textMood = 0;
 let counter = 0;
 
 for(const emoji of userInput) {
-  const emojiMood = emojiToMood[userInput[emoji]];
+  const emojiMood = emojiToMood[emoji];
 
   if(emojiMood) {
     textMood += emojiMood;
